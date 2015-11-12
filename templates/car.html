@@ -1,0 +1,11 @@
+<div>
+	<a ui-sref="cars">Back</a>
+	<h4>{{car.year}} {{car.make}} <strong>{{car.model}}</strong></h4>
+	<div>
+		<h4>Comments</h4>
+		<div ng-repeat="comment in comments">
+			{{comment.text}}
+		</div>
+		<input type="text" ng-model="newComment.text"><button ng-click="addComment(newComment.text)">+</button>
+	</div>
+</div>

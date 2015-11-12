@@ -1,0 +1,40 @@
+<div>
+	<h4>Cars</h4>
+	<div ng-repeat="car in cars">
+		<h3 ng-click="activateComments(car)"><a ui-sref="car({carId:car.$id})">{{car.year}} {{car.make}} <strong>{{car.model}}</strong></a></h3>
+		<h4>Details</h4>
+		<div>
+			Condition: {{car.condition}}
+		</div>
+		<div>
+			Mileage: {{car.mileage}}
+		</div>
+		<div>
+			Price: {{car.price}}
+		</div>
+	</div>
+	<div>
+		<h4>Create Car</h4>
+		<div>
+			Year: <input type="text" ng-model="newCar.year" />
+		</div>
+		<div>
+			Make: <input type="text" ng-model="newCar.make" />
+		</div>
+		<div>
+			Model: <input type="text" ng-model="newCar.model" />
+		</div>
+		<div>
+			Condition: <input type="text" ng-model="newCar.condition" />
+		</div>
+		<div>
+			Mileage: <input type="text" ng-model="newCar.mileage" />
+		</div>
+		<div>
+			Price: <input type="text" ng-model="newCar.price" />
+		</div>
+		<div>
+			<button ng-click="addCar()">Add Car</button>
+		</div>
+	</div>
+</div>
