@@ -1,0 +1,9 @@
+<form ng-submit="register()">
+	<div>
+		<span class="text-danger">{{error}}</span>
+	</div>
+	Email: <input type="email" ng-model="newUser.email" />
+	Password: <input type="password" ng-model="newUser.password" />
+	<button type="submit">Register</button>
+</form>
+<a ui-sref="login">Login</a>

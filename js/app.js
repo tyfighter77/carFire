@@ -2,6 +2,22 @@ var app = angular.module('carFire', ['firebase', 'ui.router']);
 
 app.config(function($urlRouterProvider, $stateProvider) {
 	$stateProvider
+		.state('register', {
+			url: '/register',
+			templateUrl: '/templates/register.html',
+			controller: 'registerCtrl'
+		})
+		.state('login', {
+			url: '/login',
+			templateUrl: '/templates/login.html',
+			controller: 'loginCtrl'
+		})
+		.state('logout', {
+			url: '/logout',
+			controller: function(userService) {
+				userService.logout();
+			}
+		})
 		.state('cars', {
 			url: '/cars',
 			templateUrl: '/templates/cars.html',

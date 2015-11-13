@@ -1,5 +1,6 @@
 <div>
 	<h4>Cars</h4>
+	<a ui-sref="logout">Logout</a>
 	<div ng-repeat="car in cars">
 		<h3 ng-click="activateComments(car)"><a ui-sref="car({carId:car.$id})">{{car.year}} {{car.make}} <strong>{{car.model}}</strong></a></h3>
 		<h4>Details</h4>
