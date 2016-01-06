@@ -1,0 +1,22 @@
+<h1>Cars Page</h1>
+
+<div ng-repeat="car in cars">
+  Make: {{car.make}}
+  Model: {{car.model}}
+  Year: {{car.year}}
+  Mileage: {{car.mileage}}
+  Price: {{car.price}}
+  <a ui-sref="car({carId:car.$id})">View Car</a>
+</div>
+
+<hr/>
+
+<div>
+  <h3>New Car</h3>
+  <input type="text" ng-model="newCar.make" placeholder="Make">
+  <input type="text" ng-model="newCar.model" placeholder="Model">
+  <input type="text" ng-model="newCar.year" placeholder="Year">
+  <input type="text" ng-model="newCar.mileage" placeholder="Mileage">
+  <input type="text" ng-model="newCar.price" placeholder="Price">
+  <button ng-click="createNewCar(newCar)">Create</button>
+</div>
